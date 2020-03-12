@@ -1,0 +1,8 @@
+C:\Users\DarrenOliveiro-Pries\source\Calculator\Calculator\SampleCalc.root\SampleCalc\SampleCalc.Tests\obj\Debug\SampleCalc.Tests.csprojResolveAssemblyReference.cache
+C:\Users\DarrenOliveiro-Pries\source\Calculator\Calculator\SampleCalc.root\SampleCalc\SampleCalc.Tests\bin\Debug\SampleCalc.Tests.dll
+C:\Users\DarrenOliveiro-Pries\source\Calculator\Calculator\SampleCalc.root\SampleCalc\SampleCalc.Tests\bin\Debug\SampleCalc.Tests.pdb
+C:\Users\DarrenOliveiro-Pries\source\Calculator\Calculator\SampleCalc.root\SampleCalc\SampleCalc.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\DarrenOliveiro-Pries\source\Calculator\Calculator\SampleCalc.root\SampleCalc\SampleCalc.Tests\bin\Debug\SampleCalc.exe
+C:\Users\DarrenOliveiro-Pries\source\Calculator\Calculator\SampleCalc.root\SampleCalc\SampleCalc.Tests\bin\Debug\SampleCalc.pdb
+C:\Users\DarrenOliveiro-Pries\source\Calculator\Calculator\SampleCalc.root\SampleCalc\SampleCalc.Tests\obj\Debug\SampleCalc.Tests.dll
+C:\Users\DarrenOliveiro-Pries\source\Calculator\Calculator\SampleCalc.root\SampleCalc\SampleCalc.Tests\obj\Debug\SampleCalc.Tests.pdb

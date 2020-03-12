@@ -1,0 +1,14 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vm="clr-namespace:SampleCalc.ViewModels"
+    xmlns:vw="clr-namespace:SampleCalc.Views">
+
+    <DataTemplate DataType="{x:Type vm:StandardViewModel}">
+        <vw:StandardView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:ScientificViewModel}">
+        <vw:ScientificView />
+    </DataTemplate>
+</ResourceDictionary>

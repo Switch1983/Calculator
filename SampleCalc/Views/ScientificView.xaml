@@ -1,0 +1,64 @@
+﻿<Window x:Class="SampleCalc.Views.ScientificView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c="clr-namespace:SampleCalc.Commands"
+    Title="Sample Calc" Height="390" Width="350">
+
+    <Window.Resources>
+        <!-- Allows a KeyBinding to be associated with a command defined in the View Model  -->
+        <c:CommandReference x:Key="ExitCommandReference" Command="{Binding ExitCommand}" />
+    </Window.Resources>
+
+    <Window.InputBindings>
+        <KeyBinding Key="X" Modifiers="Control" Command="{StaticResource ExitCommandReference}" />
+    </Window.InputBindings>
+
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Command="{Binding ExitCommand}" Header="Standard" InputGestureText="Ctrl-O" />
+                <MenuItem Command="{Binding ExitCommand}" Header="Scientific" InputGestureText="Ctrl-P" />
+                <MenuItem Command="{Binding ExitCommand}" Header="E_xit" InputGestureText="Ctrl-X" />
+            </MenuItem>
+        </Menu>
+
+        <Grid>
+            <Label HorizontalAlignment="Left" FontSize="14pt" Margin="8,22,8,0" VerticalAlignment="Top" Height="40" Width="315" Background="Gray" BorderBrush="AliceBlue" BorderThickness="2" Content="{Binding Path=Sum, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" />
+            <Button HorizontalAlignment="Left" Margin="8,85,0,0" VerticalAlignment="Top" Width="35" Height="30" Content="MC" Command="{Binding Path=MCMathCommand}" />
+            <Button HorizontalAlignment="Left" Margin="53,85,0,0" VerticalAlignment="Top" Width="35" Height="30" Content="MR" Command="{Binding Path=MRMathCommand}" />
+            <Button HorizontalAlignment="Left" Margin="98,85,0,0" VerticalAlignment="Top" Width="35" Height="30" Content="MS" Command="{Binding Path=MSMathCommand}" />
+            <Button HorizontalAlignment="Left" Margin="143,85,0,0" VerticalAlignment="Top" Width="35" Height="30" Content="M+" Command="{Binding Path=MPlusMathCommand}" />
+            <Button HorizontalAlignment="Left" Margin="188,85,0,0" VerticalAlignment="Top" Width="35" Height="30" Content="M-" Command="{Binding Path=MMinusMathCommand}" />
+
+            <Button HorizontalAlignment="Left" Margin="8,125,0,0" VerticalAlignment="Top" Width="35" Height="30" Content="C" Command="{Binding Path=CMathCommand}" />
+            <Button HorizontalAlignment="Left" Margin="53,125,0,0" VerticalAlignment="Top" Width="35" Height="30" Content="CE" Command="{Binding Path=CEMathCommand}" />
+            <Button HorizontalAlignment="Left" Margin="98,125,0,0" VerticalAlignment="Top" Width="35" Height="30" Content="±" Command="{Binding Path=MPlusMinusMathCommand}" />
+            <Button HorizontalAlignment="Left" Margin="143,125,0,0" VerticalAlignment="Top" Width="35" Height="30" Content="√" Command="{Binding Path=SQRTMathCommand}" />
+            <Button HorizontalAlignment="Left" Margin="188,125,0,0" VerticalAlignment="Top" Width="35" Height="30" Content="TAN" Command="{Binding Path=TANMathCommand}" />
+
+            <Button HorizontalAlignment="Left" Margin="8,165,0,0" VerticalAlignment="Top" Width="35" Height="30" Content="7" Command="{Binding Path=SevenMathCommand}" />
+            <Button HorizontalAlignment="Left" Margin="53,165,0,0" VerticalAlignment="Top" Width="35" Height="30" Content="8" Command="{Binding Path=EightMathCommand}" />
+            <Button HorizontalAlignment="Left" Margin="98,165,0,0" VerticalAlignment="Top" Width="35" Height="30" Content="9" Command="{Binding Path=NineMathCommand}" />
+            <Button HorizontalAlignment="Left" Margin="143,165,0,0" VerticalAlignment="Top" Width="35" Height="30" Content="/" Command="{Binding Path=DivMathCommand}" />
+            <Button HorizontalAlignment="Left" Margin="188,165,0,0" VerticalAlignment="Top" Width="35" Height="30" Content="COS" Command="{Binding Path=COSMathCommand}" />
+            
+            <Button HorizontalAlignment="Left" Margin="8,205,0,0" VerticalAlignment="Top" Width="35" Height="30" Content="4" Command="{Binding Path=FourMathCommand}" />
+            <Button HorizontalAlignment="Left" Margin="53,205,0,0" VerticalAlignment="Top" Width="35" Height="30" Content="5" Command="{Binding Path=FiveMathCommand}" />
+            <Button HorizontalAlignment="Left" Margin="98,205,0,0" VerticalAlignment="Top" Width="35" Height="30" Content="6" Command="{Binding Path=SixMathCommand}" />
+            <Button HorizontalAlignment="Left" Margin="143,205,0,0" VerticalAlignment="Top" Width="35" Height="30" Content="*" Command="{Binding Path=MulMathCommand}" />
+            <Button HorizontalAlignment="Left" Margin="188,205,0,0" VerticalAlignment="Top" Width="35" Height="30" Content="SIN" Command="{Binding Path=SINMathCommand}" />
+            
+            <Button HorizontalAlignment="Left" Margin="8,245,0,0" VerticalAlignment="Top" Width="35" Height="30" Content="1" Command="{Binding Path=OneMathCommand}" />
+            <Button HorizontalAlignment="Left" Margin="53,245,0,0" VerticalAlignment="Top" Width="35" Height="30" Content="2" Command="{Binding Path=TwoMathCommand}" />
+            <Button HorizontalAlignment="Left" Margin="98,245,0,0" VerticalAlignment="Top" Width="35" Height="30" Content="3" Command="{Binding Path=ThreeMathCommand}" />
+            <Button HorizontalAlignment="Left" Margin="143,245,0,0" VerticalAlignment="Top" Width="35" Height="30" Content="-" Command="{Binding Path=SubtractMathCommand}" />
+
+            <Button HorizontalAlignment="Left" Margin="8,285,0,0" VerticalAlignment="Top" Width="80" Height="30" Content="0" Command="{Binding Path=ZeroMathCommand}" />
+            <Button HorizontalAlignment="Left" Margin="98,285,0,0" VerticalAlignment="Top" Width="35" Height="30" Content="." Command="{Binding Path=PointMathCommand}" />
+            <Button HorizontalAlignment="Left" Margin="143,285,0,0" VerticalAlignment="Top" Width="35" Height="30" Content="+" Command="{Binding Path=PlusMathCommand}" />
+
+            <Button HorizontalAlignment="Left" Margin="288,125,0,0" VerticalAlignment="Top" Width="35" Height="190" Content="=" Command="{Binding Path=EqualMathCommand}" />
+
+        </Grid>
+    </DockPanel>
+</Window>

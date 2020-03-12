@@ -1,0 +1,5 @@
+SCC = This is a Source Code Control file
+
+[SampleCalc.Tests.csproj]
+SCC_Aux_Path = "C:\ProjectSource"
+SCC_Project_Name = "$/OPSC/Calculator/SampleCalc.root/SampleCalc/SampleCalc.Tests", IUCHAAAA
